@@ -1,16 +1,13 @@
-### Hi there 👋
-
-<!--
-**coderparthshinde/coderparthshinde** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+n1=input("Enter your first number:")
+n2=input("Enter your second number:")
+n3=input("so what do you want  /  *  -  + :")
+if n3=="+":
+    print(int(n1)+ int(n2))
+elif n3=="-":
+    print(int(n1)-int(n2))
+elif n3=="*":
+    print(int(n1)*int(n2))
+elif n3=="/":
+    print(int(n1)/int(n2))
+else:
+    print("Please cheak your input ")
