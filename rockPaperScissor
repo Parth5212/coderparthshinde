@@ -1,0 +1,78 @@
+//My first game
+package com.company;
+import java.util.Scanner;
+import java. util. Random;
+public class RockPaperScissor {
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+        System.out.println("Enter your choice\nPress r for Rock\nPress p for Paper\nPress s for Scissor\n");
+        String you=input.next();
+        switch (you)
+        {
+            case "r" -> System.out.println("\nYou choosed Rock");
+            case "p" -> System.out.println("\nYou choosed Paper");
+            case "s" -> System.out.println("\nYou choosed Scissor");
+        }
+        int computer_play = random.nextInt(3);
+        String computer_turn="N";
+        switch (computer_play)
+        {
+            case 0 -> computer_turn = "r";
+            case 1 -> computer_turn = "p";
+            case 2 -> computer_turn = "s";
+            default -> System.out.println("Invalid input by the computer");
+        }
+        switch (computer_turn)
+        {
+            case "r" -> System.out.println("Computer choosed Rock");
+            case "p" -> System.out.println("Computer choosed Paper");
+            case "s" -> System.out.println("Computer choosed Scissor");
+            default -> System.out.println("Invalid input by the computer");
+        }
+        /*
+        GAME Logic starts.....:->
+        RR,PP,SS,RS,RP,PS,PR,SR,SP
+        GAME Logic Ends...
+         */
+        String game_win=" ";
+        if (computer_turn.equals(you) && you.equals(computer_turn))
+        {
+            game_win="Tie!";
+        }
+        if (computer_turn=="r" && you.equals("s"))
+        {
+            game_win="computer won!";
+        }
+        if(computer_turn=="r" && you.equals("p"))
+        {
+            game_win="You won!";
+        }
+
+        if (computer_turn=="s" && you.equals("p"))
+        {
+            game_win="computer won!";
+        }
+        if(computer_turn=="s" && you.equals("r"))
+        {
+            game_win="You won!";
+        }
+
+        if (computer_turn=="p" && you.equals("r"))
+        {
+            game_win="computer won!";
+        }
+        if(computer_turn=="p" && you.equals("s"))
+        {
+            game_win="You won!";
+        }
+        System.out.printf("The game result is ............<|{%s}|>",game_win);
+
+
+
+
+
+    }
+}
+
